@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import Button from './UI/Button';
 
 import classes from './DodajPosao.module.css';
 
@@ -35,7 +36,7 @@ function DodajPosao(props) {
         <label htmlFor='rok'>Rok</label>
         <input type='text' id='rok' ref={rokRef} />
       </div>
-      <button>Dodaj posao</button>
+      <Button color="blue" text='Dodaj posao'></Button>
     </form>
   );
 }

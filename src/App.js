@@ -1,6 +1,11 @@
 import React, {useState,useEffect, useCallback} from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Footer from './komponente/Footer';
 import PosloviLista from './komponente/PosloviLista';
 import DodajPosao from './komponente/DodajPosao';
+import Neka from './stranice/Neka';
+import Kontakt from './stranice/Kontakt';
+import Onama from './stranice/Onama';
 import './App.css';
 
 function App() {
@@ -67,6 +72,15 @@ if(ucitavaSe){
   sadrzaj =<p>Ucitava se ...</p>
 }
   return (
+    <Router>
+       
+     <div className="container">
+     <Routes>
+     <Route 
+     path='/' 
+     element={ 
+
+     
     <React.Fragment>
       
       <section>
@@ -82,6 +96,22 @@ if(ucitavaSe){
       </section>
 
     </React.Fragment>
+    
+  }  />
+    <Route 
+     path='/nesto' 
+     element={ 
+<p>Nesto</p>
+      }
+     
+     />
+    <Route path='/neka' element={<Neka />} />
+    <Route path='/kontakt' element={<Kontakt />} />
+    <Route path='/onama' element={<Onama />} />
+    </Routes>
+    <Footer/>
+    </div>
+    </Router>
   );
 }
 
