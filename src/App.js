@@ -68,12 +68,13 @@ if(ucitavaSe){
 }
   return (
     <React.Fragment>
+      
       <section>
 <DodajPosao onDodajPosao={dodajPosaoHandler}/>
       </section>
 
       <section>
-        <button onClick={izvuciPosloveHandler}>Prikaz poslova</button>
+        <button onClick={izvuciPosloveHandler}>Prikaži zadate poslove</button>
       </section>
 
       <section>
